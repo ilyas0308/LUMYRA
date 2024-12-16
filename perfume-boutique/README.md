@@ -1,4 +1,4 @@
-echo "LUMYRA Luxury Perfumes - Slider Images
+# "LUMYRA Luxury Perfumes - Slider Images
 This directory contains high-resolution images for the luxury perfume slider.
 
 Image Sourcing Guidelines:

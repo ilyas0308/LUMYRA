@@ -5,11 +5,6 @@ Image Sourcing Guidelines:
 - Minimum Resolution: 1600x800 pixels
 - Professional, high-quality images
 - Consistent aesthetic
-- Properly licensed for commercial use" > c:/Users/Admin/Desktop/ab-purm/perfume-boutique/images/slider/README.md# Create directory if it doesn't exist
-$sliderPath = "c:/Users/Admin/Desktop/ab-purm/perfume-boutique/images/slider"
-if (!(Test-Path -Path $sliderPath)) {
-    New-Item -ItemType Directory -Path $sliderPath
-}
 
 # Unsplash Image Download Function
 function Download-Image {

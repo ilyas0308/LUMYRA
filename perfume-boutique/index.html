@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMYRA - Luxury Perfumes</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-spray-can-sparkles"></i></span>
+                <div class="logo-text-container">
+                    <span class="logo-text">LUMYRA</span>
+                    <span class="logo-slogan">Luxury Perfumes</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#collection">Collection</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <div class="user-account">
+                    <i class="fas fa-user"></i>
+                    <div class="account-dropdown">
+                        <a href="#" id="loginBtn">Login</a>
+                        <a href="#" id="registerBtn">Register</a>
+                        <a href="#" id="profileBtn" style="display: none;">My Profile</a>
+                        <a href="#" id="wishlistBtn" style="display: none;">My Wishlist</a>
+                        <a href="#" id="logoutBtn" style="display: none;">Logout</a>
+                    </div>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Discover Your Signature Scent</h1>
+                <p>Explore our collection of exclusive luxury fragrances</p>
+                <button class="cta-button">Shop Now</button>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1615529328331-f8917597711f?w=1920');"></div>
+        </section>
+
+        <section id="featured" class="featured-section">
+            <h2>Best Sellers</h2>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=800" alt="Luxury Perfume">
+                    <div class="featured-content">
+                        <h3>Midnight Rose</h3>
+                        <p>Elegant and mysterious</p>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800" alt="Classic Perfume">
+                    <div class="featured-content">
+                        <h3>Ocean Breeze</h3>
+                        <p>Fresh and invigorating</p>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=800" alt="Premium Perfume">
+                    <div class="featured-content">
+                        <h3>Golden Amber</h3>
+                        <p>Rich and sophisticated</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="collection" class="collection-section">
+            <h2>Our Collection</h2>
+            <div class="collection-filters">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search perfumes...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="floral">Floral</button>
+                    <button class="filter-btn" data-category="woody">Woody</button>
+                    <button class="filter-btn" data-category="fresh">Fresh</button>
+                </div>
+            </div>
+            <div class="perfume-grid">
+                <div class="perfume-card" data-category="floral">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=800" alt="Midnight Rose">
+                    <div class="perfume-details">
+                        <h3>Midnight Rose</h3>
+                        <p>A mysterious blend of rose and dark woods</p>
+                        <div class="perfume-meta">
+                            <span class="category">Floral</span>
+                            <span class="price">$299</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="perfume-card" data-category="fresh">
+                    <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=800" alt="Ocean Breeze">
+                    <div class="perfume-details">
+                        <h3>Ocean Breeze</h3>
+                        <p>Fresh aquatic notes with citrus undertones</p>
+                        <div class="perfume-meta">
+                            <span class="category">Fresh</span>
+                            <span class="price">$259</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="perfume-card" data-category="woody">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=800" alt="Golden Amber">
+                    <div class="perfume-details">
+                        <h3>Golden Amber</h3>
+                        <p>Warm amber with vanilla and musk</p>
+                        <div class="perfume-meta">
+                            <span class="category">Woody</span>
+                            <span class="price">$329</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="perfume-card" data-category="floral">
+                    <img src="https://images.unsplash.com/photo-1557170334-a9632e77c6e4?w=800" alt="Spring Bouquet">
+                    <div class="perfume-details">
+                        <h3>Spring Bouquet</h3>
+                        <p>Light and airy floral composition</p>
+                        <div class="perfume-meta">
+                            <span class="category">Floral</span>
+                            <span class="price">$279</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <div class="story-text">
+                    <p>Welcome to <strong>LUMYRA</strong>, where luxury meets artistry.</p>
+                    <p>Each fragrance tells a unique story, crafted with passion and precision.</p>
+                    <p>Discover your signature scent in our exclusive collection.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="newsletter-section">
+            <div class="container">
+                <h2>Exclusive Offers</h2>
+                <p>Subscribe to receive special discounts and early access to new releases</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" id="newsletterEmail" required>
+                        <label for="newsletterEmail">Your Email Address</label>
+                        <button type="submit" class="btn-subscribe">Get 10% Off</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="best-sellers" class="best-sellers-section">
+            <h2>Best Sellers</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3" alt="Midnight Rose">
+                    </div>
+                    <h3>Midnight Rose</h3>
+                    <p class="price">$299</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-4.0.3" alt="Golden Amber">
+                    </div>
+                    <h3>Golden Amber</h3>
+                    <p class="price">$349</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3" alt="Ocean Breeze">
+                    </div>
+                    <h3>Ocean Breeze</h3>
+                    <p class="price">$279</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="limited-offers" class="limited-offers-section">
+            <div class="container">
+                <h2>Limited Time Offers</h2>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=800" alt="Summer Collection">
+                            <div class="offer-badge">50% OFF</div>
+                        </div>
+                        <div class="offer-details">
+                            <h3>Summer Breeze Collection</h3>
+                            <p>Refresh your scent with our limited summer edition</p>
+                            <div class="offer-pricing">
+                                <span class="original-price">$299</span>
+                                <span class="discounted-price">$149</span>
+                            </div>
+                            <button class="btn-offer">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-image">
+                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=800" alt="Luxury Bundle">
+                            <div class="offer-badge">Bundle Deal</div>
+                        </div>
+                        <div class="offer-details">
+                            <h3>Luxury Perfume Bundle</h3>
+                            <p>Get 3 premium fragrances at an unbeatable price</p>
+                            <div class="offer-pricing">
+                                <span class="original-price">$897</span>
+                                <span class="discounted-price">$599</span>
+                            </div>
+                            <button class="btn-offer">Shop Bundle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get in Touch</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-waves">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+        
+        <div class="footer-content">
+            <div class="footer-section brand">
+                <h3 class="footer-logo">Luxury Perfume</h3>
+                <p class="footer-desc">Discover the art of luxury perfumery. Experience the finest fragrances crafted for those who appreciate exceptional scents.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section services">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#consultation">Fragrance Consultation</a></li>
+                    <li><a href="#samples">Sample Program</a></li>
+                    <li><a href="#gifts">Gift Services</a></li>
+                    <li><a href="#custom">Custom Blending</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to receive updates about new fragrances and exclusive offers.</p>
+                <form class="newsletter-form">
+                    <div class="input-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-subscribe">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-info">
+                <p>&copy; 2024 Luxury Perfume. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#shipping">Shipping Info</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-container">
+            <span class="close">&times;</span>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+                <span class="auth-tab-slider"></span>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <input type="email" id="loginEmail" required>
+                    <label for="loginEmail">Email</label>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="loginPassword" required>
+                    <label for="loginPassword">Password</label>
+                    <i class="fas fa-lock"></i>
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="auth-submit">Login</button>
+                <div class="social-auth">
+                    <p>Or continue with</p>
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn google">
+                            <i class="fab fa-google"></i>
+                            Google
+                        </button>
+                        <button type="button" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            Facebook
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <input type="text" id="registerName" required>
+                    <label for="registerName">Full Name</label>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="registerEmail" required>
+                    <label for="registerEmail">Email</label>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="registerPassword" required>
+                    <label for="registerPassword">Password</label>
+                    <i class="fas fa-lock"></i>
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" required>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <i class="fas fa-lock"></i>
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="form-options">
+                    <label class="terms-check">
+                        <input type="checkbox" id="termsAccept" required>
+                        <span class="checkmark"></span>
+                        I accept the Terms & Conditions
+                    </label>
+                </div>
+                <button type="submit" class="auth-submit">Create Account</button>
+                <div class="social-auth">
+                    <p>Or sign up with</p>
+                    <div class="social-buttons">
+                        <button type="button" class="social-btn google">
+                            <i class="fab fa-google"></i>
+                            Google
+                        </button>
+                        <button type="button" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            Facebook
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
